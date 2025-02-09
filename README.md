@@ -8,7 +8,7 @@
 [![MIT License][mit-badge]][mit-url]
 [![Version][crates-badge]][crates-url]
 
-[docs-url]: https://docs.rs/transitionable/latest/transitionable/
+[docs-url]: https://docs.rs/transitionable/latest/transitionable/struct.Transitionable.html
 
 [**Documentation**][docs-url]
 
