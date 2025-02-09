@@ -27,7 +27,9 @@ jobs:
         run: cargo clippy --all-targets --all-features --locked -- -D warnings
         working-directory: ${{ env.WORKING_DIR }}
       - if: matrix.task == 'test' && matrix.panic == 'unwind'
-        run: cargo test --all-features --locked
+        run: |
+          cargo test --all-features --locked
+          cargo test --all-features --locked --doc
       - if: matrix.task == 'test' && matrix.panic == 'abort'
         run: cargo run --locked
         working-directory: transitionable-abort-tests
