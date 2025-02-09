@@ -1,4 +1,19 @@
-This crate provides a type called `Transitionable<T>` which gets you transition any `T` from one state to the next by value, even when you only have acess to a mutable reference `&mut T`.
+[actions-badge]: https://github.com/mickvangelderen/transitionable/workflows/main/badge.svg
+[actions-url]: https://github.com/mickvangelderen/transitionable/actions/workflows/main.yaml?query=branch%3Amain
+[mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
+[mit-url]: https://github.com/mickvangelderen/transitionable/blob/master/LICENSE
+
+[![Build Status][actions-badge]][actions-url]
+[![MIT License][mit-badge]][mit-url]
+![Crates.io Version](https://img.shields.io/crates/v/transitionable)
+
+[docs-url]: https://docs.rs/transitionable/latest/transitionable/
+
+[**Documentation**][docs-url]
+
+# Transitionable
+
+Allows transitioning a `T` from one state to the next by value, even when you only have access to a mutable reference `&mut T`.
 
 ```rust
 use transitionable::Transitionable;
@@ -28,5 +43,7 @@ assert!(matches!(**t, State::B));
 
 These crates offer similar functionality:
 
-- [`takable`](https://crates.io/crates/takeable) is similar but does not optimize when `panic = "abort"`.
+- [`takeable`](https://crates.io/crates/takeable) is similar but does not optimize when `panic = "abort"`.
 - [`replace_with`](https://crates.io/crates/replace_with) can be used when you can not wrap your `T` in another type but has different performance characteristics and the optimized version is behind an `unsafe` function.
+
+View the [documentation][docs-url] for more details.
