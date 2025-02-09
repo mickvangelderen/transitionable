@@ -8,20 +8,7 @@ license = "MIT"
 license-file = "LICENSE"
 repository = "https://github.com/mickvangelderen/transitionable"
 categories = ["data-structures", "rust-patterns", "no-std", "embedded"]
-keywords = [
-    "transition",
-    "transitionable",
-    "state",
-    "machine",
-    "state-machine",
-    "takeable",
-    "option",
-    "takeable-option",
-    "replace-with",
-    "smart-pointer",
-    "no-std",
-    "lightweight",
-]
+keywords = ["state-machine", "option", "takeable", "replace-with"]
 include = ["src", "README.md"]
 
 [features]
