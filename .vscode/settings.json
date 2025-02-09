@@ -1,0 +1,19 @@
+{
+    "editor.formatOnSave": true,
+    "[rust]": {
+        "editor.rulers": [
+            100
+        ],
+        "rewrap.wrappingColumn": 100,
+    },
+    "rust-analyzer.rustfmt.extraArgs": [
+        "+nightly"
+    ],
+    "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.cargo.cfgs": [
+        "debug_assertions",
+        "miri",
+        "test",
+        "panic=abort"
+    ],
+}

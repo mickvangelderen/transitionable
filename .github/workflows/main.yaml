@@ -1,0 +1,33 @@
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        task: [format, lint, test]
+        panic: [unwind, abort]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+      - run: echo "WORKING_DIR=${{ matrix.panic == 'unwind' && '.' || 'transitionable-abort-tests' }}" >> $GITHUB_ENV
+      - if: matrix.task == 'format'
+        run: cargo fmt --check
+        working-directory: ${{ env.WORKING_DIR }}
+      - if: matrix.task == 'lint'
+        run: cargo clippy --all-targets --all-features --locked -- -D warnings
+        working-directory: ${{ env.WORKING_DIR }}
+      - if: matrix.task == 'test' && matrix.panic == 'unwind'
+        run: cargo test --all-features --locked
+      - if: matrix.task == 'test' && matrix.panic == 'abort'
+        run: cargo run --locked
+        working-directory: transitionable-abort-tests
