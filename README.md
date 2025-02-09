@@ -2,10 +2,11 @@
 [actions-url]: https://github.com/mickvangelderen/transitionable/actions/workflows/main.yaml?query=branch%3Amain
 [mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [mit-url]: https://github.com/mickvangelderen/transitionable/blob/master/LICENSE
-
+[crates-badge]: https://img.shields.io/crates/v/transitionable
+[crates-url]: https://crates.io/crates/transitionable
 [![Build Status][actions-badge]][actions-url]
 [![MIT License][mit-badge]][mit-url]
-![Crates.io Version](https://img.shields.io/crates/v/transitionable)
+[![Version][crates-badge]][crates-url]
 
 [docs-url]: https://docs.rs/transitionable/latest/transitionable/
 
