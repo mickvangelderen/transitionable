@@ -5,7 +5,6 @@ edition = "2021"
 description = "A no_std compatible type to transition `T -> T` where you have an `&mut T`."
 authors = ["Mick van Gelderen <mickvangelderen@gmail.com>"]
 license = "MIT"
-license-file = "LICENSE"
 repository = "https://github.com/mickvangelderen/transitionable"
 categories = ["data-structures", "rust-patterns", "no-std", "embedded"]
 keywords = ["state-machine", "option", "takeable", "replace-with"]
