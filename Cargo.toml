@@ -21,6 +21,7 @@ keywords = [
     "no-std",
     "lightweight",
 ]
+include = ["src", "README.md"]
 
 [features]
 _test = []
